@@ -8,11 +8,11 @@ install_package htop
 
 install_package synapse synapse-core/ppa
 rm ~/.config/synapse/config.json
-ln -s ~/projects/ubuntu/os/config/synapse/config.json config.json
-
+ln -s ~/projects/ubuntu/os/config/synapse/config.json ~/.config/synapse/config.json
 
 
 # dropbox
+echo "Installing dropbox"
 if [ ! -f ~/.dropbox-dist/dropboxd ]; then
     cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
     ~/.dropbox-dist/dropboxd
